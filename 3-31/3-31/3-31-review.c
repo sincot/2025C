@@ -293,3 +293,65 @@ void CreateNDate()
 }
 
 //void PrintTopK(int k);
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+#define N 20
+int main()
+{
+
+	int a[N] = { 0 }, b[N] = { 0 };
+	int i, j, k, anum, bnum, c[N + N];
+	scanf("%d", &anum);   //输入数组a元素个数
+	for (i = 0; i < anum; i++)
+	{
+		scanf("%d", &a[i]);
+	}
+	scanf("%d", &bnum);   //输入数组b元素个数
+	for (i = 0; i < bnum; i++)
+	{
+		scanf("%d", &b[i]);
+	}
+	/***** 在数组a和b都有数据时比较两个数组 *****/
+	/********** Begin *********/
+	int* pa = &a[0];
+	int* pb = &b[0];
+	j = 1;
+	k = 1;
+
+	while (j < anum && k < bnum)
+	{
+		if (*pa > *pb)
+		{
+			printf("%d ", *pb);
+			pb++;
+			k++;
+		}
+		else
+		{
+			printf("%d ", *pa);
+			pa++;
+			j++;
+		}
+	}
+
+	if (j < anum)
+	{
+		for (; j < anum; j++)
+		{
+			printf("%d ", pa[j]);
+		}
+	}
+	else
+	{
+		for (; k < bnum; k++)
+		{
+			printf("%d ", pb[k]);
+		}
+	}
+
+	return 0;
+}
