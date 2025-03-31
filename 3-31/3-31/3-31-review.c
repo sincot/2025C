@@ -242,7 +242,6 @@ int main()
 }
 */
 
-<<<<<<< HEAD
 int main()
 {
 	int arr[100] = { 0 };
@@ -269,5 +268,28 @@ int main()
 
 	return 0;
 }
-=======
->>>>>>> 28b889842d8951de03f3685f05ca34bebe7ae718
+
+
+void CreateNDate()
+{
+	// дьЪ§Он
+	int n = 10000;
+	srand(time(0));
+	const char* file = "data.txt";
+	FILE* fin = fopen(file, "w");
+	if (fin == NULL)
+	{
+		perror("fopen error");
+		return;
+	}
+
+	for (size_t i = 0; i < n; ++i)
+	{
+		int x = rand() % 1000000;
+		fprintf(fin, "%d\n", x);
+	}
+
+	fclose(fin);
+}
+
+//void PrintTopK(int k);
