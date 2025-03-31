@@ -242,6 +242,7 @@ int main()
 }
 */
 
+<<<<<<< HEAD
 int main()
 {
 	int arr[100] = { 0 };
@@ -268,3 +269,5 @@ int main()
 
 	return 0;
 }
+=======
+>>>>>>> 28b889842d8951de03f3685f05ca34bebe7ae718
